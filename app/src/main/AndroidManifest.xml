@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <!-- 🔹 Agrega el permiso -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Lab12"
         tools:targetApi="31">
+
+        <!-- 🔹 Agrega la clave de API -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDJN-Sg7WXiwtjCbzL1aoG4uCRYffc9MOg" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -19,7 +28,6 @@
             android:theme="@style/Theme.Lab12">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
